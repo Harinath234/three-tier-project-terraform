@@ -78,7 +78,6 @@ Allows private subnet instances to access the internet securely.
 
 - Proxy allows HTTP (80) and SSH (22) from Internet
 - App allows traffic only from Proxy Security Group
-- RDS allows MySQL (3306) only from App Security Group
 - RDS is not publicly accessible
 
 ---
@@ -93,8 +92,8 @@ Allows private subnet instances to access the internet securely.
 ### Clone the repository
 
 ```
-[git clone https://github.com/Harinath234/three-tier-project-terraform]
-cd three-tier-project-terraform
+[git clone https://github.com/Harinath234/three-tier-project-terraform.git]
+cd three-tier-project-terraform.git
 ```
 
 ### Initialize Terraform
