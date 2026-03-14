@@ -23,7 +23,7 @@ variable "rds_endpoint" {
 # variable "public_zone_name" {
 #   description = "The name of the public hosted zone"
 #   type        = string
-#   default     = "b15catsvsdogs.xyz"
+#   default     = "harinath.shop"
 # }
 
 variable "alb_record_name" {
