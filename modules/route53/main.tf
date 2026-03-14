@@ -33,7 +33,6 @@ resource "aws_route53_record" "alb_backend" {
 
 resource "aws_route53_record" "alb_frontend" {
 #  zone_id = aws_route53_zone.public_zone.zone_id
-  #zone_id = "Z03144592RNZ1O5HJMDC4"
   zone_id = "Z02075553FURUNNOEWMSH"
   name    = var.alb_dns_frontend_record  #"login.b15catsvsdogs.xyz" shoud point to F.LB
   type    = "CNAME"
