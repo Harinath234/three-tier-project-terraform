@@ -82,3 +82,7 @@ Allows private subnet instances to access the internet securely.
 - RDS is not publicly accessible
 
 ---
+
+# output
+
+![AWS Three Tier Architecture](screenshots/store_output.jpeg)
