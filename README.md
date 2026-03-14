@@ -86,3 +86,35 @@ Allows private subnet instances to access the internet securely.
 # output
 
 ![AWS Three Tier Architecture](screenshots/store_output.jpeg)
+
+
+# How to Run the Project
+
+### Clone the repository
+
+```
+[git clone https://github.com/Harinath234/three-tier-project-terraform]
+cd three-tier-project-terraform
+```
+
+### Initialize Terraform
+
+```
+terraform init
+```
+
+### Review the execution plan
+
+```
+terraform plan
+```
+
+### Apply the infrastructure
+
+```
+terraform apply
+```
+
+Type **yes** when prompted.
+
+---
