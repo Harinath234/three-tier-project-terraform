@@ -8,7 +8,7 @@ This project provisions a **Basic 3-Tier Architecture** in AWS using Terraform.
 
 ## Architecture Diagram
 
-![Architecture Diagram](images/architecture.png)
+![Architecture Diagram](screenshots/3tier_project_flow.png)
 
 ### Traffic Flow
 
