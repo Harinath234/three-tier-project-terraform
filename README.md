@@ -20,7 +20,7 @@ Internet → Proxy Server → Application Server → RDS Database
 
 ## 1️⃣ VPC
 
-- CIDR: `10.0.0.0/16`
+- CIDR: `170.20.0.0/16`
 - DNS Hostnames Enabled
 
 📸 Screenshot:
