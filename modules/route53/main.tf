@@ -14,17 +14,16 @@ resource "aws_route53_record" "rds_endpoint" {
   records = [var.rds_endpoint]
 }
 
-# #  Public Hosted Zone for b15facebook.xyz
+# #  Public Hosted Zone for harinath.shop
 # resource "aws_route53_zone" "public_zone" {
 # #  name = var.public_zone_name
 # }
 
 resource "aws_route53_record" "alb_backend" {
   # zone_id = aws_route53_zone.public_zone.zone_id
-  #zone_id = "Z03144592RNZ1O5HJMDC4"
   zone_id = "Z02075553FURUNNOEWMSH"
   
-  name    = var.alb_record_name    # "api.b15catsvsdogs.xyz" --> should point to backend LB 
+  name    = var.alb_record_name    # "api.harinath.shop" --> should point to backend LB 
   type    = "CNAME"
   ttl     = 300
   records = [var.alb_dns_name]
