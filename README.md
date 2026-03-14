@@ -31,15 +31,19 @@ Internet → Proxy Server → Application Server → RDS Database
 
 ## 2️⃣ Subnets
 
-| Subnet | CIDR | Purpose |
-|--------|------|----------|
-| Public | 10.0.1.0/24 | Proxy EC2 |
-| Private App | 10.0.2.0/24 | App EC2 |
-| Private DB | 10.0.3.0/24 | RDS |
+## Subnet Design
 
-📸 Screenshot:
+| Subnet Type | CIDR | Availability Zone | Purpose |
+|-------------|------|------------------|---------|
+| Public Subnet 1 | 170.20.1.0/24 | us-east-1a | Load Balancer / Proxy |
+| Public Subnet 2 | 170.20.2.0/24 | us-east-1b | Load Balancer / Proxy |
+| Private Frontend 1 | 170.20.3.0/24 | us-east-1a | Web Server |
+| Private Frontend 2 | 170.20.4.0/24 | us-east-1b | Web Server |
+| Private Backend 1 | 170.20.5.0/24 | us-east-1a | Application Server |
+| Private Backend 2 | 170.20.6.0/24 | us-east-1b | Application Server |
+| Private DB 1 | 170.20.7.0/24 | us-east-1a | Database (RDS) |
+| Private DB 2 | 170.20.8.0/24 | us-east-1b | Database (RDS) |
 
-![Subnets](images/subnets.png)
 
 ---
 
@@ -47,19 +51,11 @@ Internet → Proxy Server → Application Server → RDS Database
 
 Allows public internet access for proxy server.
 
-📸 Screenshot:
-
-![Internet Gateway](images/igw.png)
-
 ---
 
 ## 4️⃣ NAT Gateway
 
 Allows private subnet instances to access the internet securely.
-
-📸 Screenshot:
-
-![NAT Gateway](images/NAT.png)
 
 ---
 
@@ -68,10 +64,6 @@ Allows private subnet instances to access the internet securely.
 - Proxy Server (Public Subnet)
 - Application Server (Private Subnet)
 
-📸 Screenshot:
-
-![EC2 Instances](images/ec2.png)
-
 ---
 
 ## 6️⃣ RDS Database (MySQL)
@@ -79,10 +71,6 @@ Allows private subnet instances to access the internet securely.
 - Instance Type: `db.t3.micro`
 - Not Publicly Accessible
 - Accessible only from App server
-
-📸 Screenshot:
-
-![RDS](images/RDS.png)
 
 ---
 
