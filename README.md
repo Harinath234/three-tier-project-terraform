@@ -79,22 +79,24 @@ Allows private subnet instances to access the internet securely.
 - Not Publicly Accessible
 - Accessible only from App server
 
-![Architecture Diagram](screenshots/Instances.png)
+![Architecture Diagram](screenshots/Database/Database.png)
 
 ---
 
 # 🔐 Security Architecture
 
-- Proxy allows HTTP (80) and SSH (22) from Internet
 - App allows traffic only from Proxy Security Group
 - RDS is not publicly accessible
+
+![Architecture Diagram](screenshots/SecurityGroups.png)
 
 ---
 
 # output
 
-![AWS Three Tier Architecture](screenshots/store_output.jpeg)
+![AWS Three Tier Architecture](screenshots/Output/Terraform-Output-1.png)
 
+![AWS Three Tier Architecture](screenshots/Output/Login-output.png)
 
 # How to Run the Project
 
