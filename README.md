@@ -25,7 +25,7 @@ Internet → Proxy Server → Application Server → RDS Database
 
 📸 Screenshot:
 
-![VPC](images/vpc.png)
+![VPC](screenshots/VPC/VPC-resource-output-1.png)
 
 ---
 
@@ -44,6 +44,7 @@ Internet → Proxy Server → Application Server → RDS Database
 | Private DB 1 | 170.20.7.0/24 | us-east-1a | Database (RDS) |
 | Private DB 2 | 170.20.8.0/24 | us-east-1b | Database (RDS) |
 
+![Architecture Diagram](screenshots/Subnets.png)
 
 ---
 
@@ -51,11 +52,15 @@ Internet → Proxy Server → Application Server → RDS Database
 
 Allows public internet access for proxy server.
 
+![Architecture Diagram](screenshots/IGW.png)
+
 ---
 
 ## 4️⃣ NAT Gateway
 
 Allows private subnet instances to access the internet securely.
+
+![Architecture Diagram](screenshots/Nat-Gateway.png)
 
 ---
 
@@ -64,6 +69,8 @@ Allows private subnet instances to access the internet securely.
 - Proxy Server (Public Subnet)
 - Application Server (Private Subnet)
 
+![Architecture Diagram](screenshots/Instances.png)
+
 ---
 
 ## 6️⃣ RDS Database (MySQL)
@@ -71,6 +78,8 @@ Allows private subnet instances to access the internet securely.
 - Instance Type: `db.t3.micro`
 - Not Publicly Accessible
 - Accessible only from App server
+
+![Architecture Diagram](screenshots/Instances.png)
 
 ---
 
